@@ -4,7 +4,11 @@ const Footer = () => {
             <div class="footer-copyright">
                 <div class="container">
                     © {new Date().getFullYear()} Copyright Text
-                    <a class="grey-text text-lighten-4 right" href="#!">
+                    <a
+                        class="grey-text text-lighten-4 right"
+                        href="https://github.com/Spartak-Sargsyan/React-Shop"
+                        target="black"
+                    >
                         More Links
                     </a>
                 </div>
