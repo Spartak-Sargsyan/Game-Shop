@@ -7,17 +7,98 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-nav{
-  padding: 0 1rem;
+nav {
+    padding: 0 1rem;
 }
 
-.content{
-  min-height: calc(100vh - 70px - 64px);
-  padding: 1.5rem 0;
+.content {
+    min-height: calc(100vh - 70px - 64px);
+    padding: 1.5rem 0;
 }
 
-.goods{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr) );
-  gap: 1rem;
+.goods {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+.card-image {
+    flex-grow: 1;
+}
+.cart {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 5;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.basket-list{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: white;
+  width: 50rem;
+  max-width: 95%;
+
+  animation: show 500ms ease-in-out;
+}
+
+.basket-close{
+  cursor: pointer;
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  color:white;
+}
+
+.basket-delete{
+  cursor: pointer;
+}
+
+.basket-count{
+  cursor: pointer;
+  vertical-align: middle;
+  color: #26a69a;
+}
+
+#toast-container{
+  top: 3rem !important;
+  animation: fade-in 250ms ease-in-out;
+}
+
+@media screen and (min-width: 767px) {
+    .cart {
+        top: 5rem;
+        bottom: unset;
+    }
+}
+
+@keyframes fade-in {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  from {
+    top: 70%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
 }
